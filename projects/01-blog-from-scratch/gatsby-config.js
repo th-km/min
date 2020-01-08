@@ -5,5 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Minimal",
+    description: "A Minimal Gatsby blog with Theme UI",
+  },
+  plugins: ["gatsby-plugin-theme-ui"],
 }

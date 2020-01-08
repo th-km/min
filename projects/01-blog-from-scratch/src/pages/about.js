@@ -7,7 +7,7 @@ import Content from "../components/Content"
 export default () => (
   <Layout>
     <Content>
-      <Styled.h1>Blog</Styled.h1>
+      <Styled.h1>About</Styled.h1>
     </Content>
   </Layout>
 )
