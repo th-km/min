@@ -1,5 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui"
+import { jsx, Styled } from "theme-ui"
+import { Link } from "gatsby"
 
 const Posts = ({ post }) => (
   <article
@@ -9,7 +10,11 @@ const Posts = ({ post }) => (
       pb: 4,
     }}
   >
-    <h3>{post.title}</h3>
+    <h3>
+      <Styled.a as={Link} to={post.slug}>
+        {post.title}
+      </Styled.a>
+    </h3>
     <p>{post.excerpt}</p>
     <span
       sx={{

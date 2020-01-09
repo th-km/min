@@ -9,6 +9,7 @@ const usePosts = () => {
             id
             frontmatter {
               title
+              slug
               date(formatString: "DD MMMM, YYYY")
             }
             excerpt
@@ -22,6 +23,7 @@ const usePosts = () => {
     id: node.id,
     title: node.frontmatter.title,
     date: node.frontmatter.date,
+    slug: node.frontmatter.slug,
     excerpt: node.excerpt,
   }))
 }
