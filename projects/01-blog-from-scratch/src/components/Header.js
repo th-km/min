@@ -1,4 +1,3 @@
-import React from "react"
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"

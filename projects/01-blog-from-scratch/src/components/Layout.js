@@ -1,12 +1,12 @@
-import React from "react"
 /** @jsx jsx */
+import { Fragment } from "react"
 import { jsx } from "theme-ui"
 import { Global } from "@emotion/core"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 const Layout = ({ children }) => (
-  <>
+  <Fragment>
     <Global
       styles={theme => ({
         "*, *::before, *::after": {
@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
       {children}
       <Footer />
     </div>
-  </>
+  </Fragment>
 )
 
 export default Layout
