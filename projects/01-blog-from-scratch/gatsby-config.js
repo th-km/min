@@ -9,5 +9,15 @@ module.exports = {
     title: "Minimal",
     description: "A Minimal Gatsby blog with Theme UI",
   },
-  plugins: ["gatsby-plugin-theme-ui"],
+  plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "posts",
+        path: `posts`,
+      },
+    },
+    "gatsby-transformer-remark",
+    "gatsby-plugin-theme-ui",
+  ],
 }
