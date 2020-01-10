@@ -17,7 +17,7 @@ module.exports = {
         path: `posts`,
       },
     },
-    "gatsby-transformer-remark",
+    `gatsby-plugin-mdx`,
     "gatsby-plugin-theme-ui",
   ],
 }

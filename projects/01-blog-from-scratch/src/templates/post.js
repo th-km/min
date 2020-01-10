@@ -1,16 +1,17 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 import Content from "../components/Content"
 
-const Post = ({ data: { markdownRemark: post } }) => {
+const Post = ({ data: { mdx: post } }) => {
   return (
     <Layout>
       <Content>
         <h1>{post.frontmatter.title}</h1>
         <span>{post.frontmatter.date}</span>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <MDXRenderer>{post.body}</MDXRenderer>
         <Styled.a as={Link} to="/">
           &larr; Back to all posts
         </Styled.a>
@@ -21,12 +22,12 @@ const Post = ({ data: { markdownRemark: post } }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
+    mdx(frontmatter: { slug: { eq: $slug } }) {
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY")
       }
+      body
     }
   }
 `
