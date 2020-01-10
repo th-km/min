@@ -1,11 +1,8 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
-import useSiteMetadata from "../hooks/useSiteMetadata"
 
 const Header = () => {
-  const { title } = useSiteMetadata()
-
   return (
     <header
       sx={{
@@ -30,7 +27,7 @@ const Header = () => {
           }}
           to="/"
         >
-          {title}
+          Minimal blog
         </Link>
         <Styled.a as={Link} to="/about">
           About
