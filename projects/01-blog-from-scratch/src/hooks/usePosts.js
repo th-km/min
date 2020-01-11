@@ -10,6 +10,14 @@ const usePosts = () => {
             title
             slug
             date(formatString: "DD MMMM, YYYY")
+            alt
+            image {
+              sharp: childImageSharp {
+                fluid(maxWidth: 768) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
           excerpt
         }
@@ -22,6 +30,8 @@ const usePosts = () => {
     title: post.frontmatter.title,
     date: post.frontmatter.date,
     slug: post.frontmatter.slug,
+    image: post.frontmatter.image,
+    alt: post.frontmatter.alt,
     excerpt: post.excerpt,
   }))
 }
