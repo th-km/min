@@ -5,18 +5,17 @@ const Footer = () => {
   return (
     <footer
       sx={{
-        p: 4,
-        backgroundColor: "black",
+        py: 4,
       }}
     >
       <p
         sx={{
           fontSize: 0,
           fontFamily: "mono",
-          color: "white",
+          color: "gray",
         }}
       >
-        © Minimal Gatsby blog
+        © {new Date().getFullYear()} Minimal Gatsby blog
       </p>
     </footer>
   )

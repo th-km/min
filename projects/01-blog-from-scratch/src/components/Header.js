@@ -1,13 +1,12 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 
 const Header = () => {
   return (
     <header
       sx={{
-        p: 4,
-        backgroundColor: "white",
+        py: 4,
       }}
     >
       <nav
@@ -19,19 +18,23 @@ const Header = () => {
         <Link
           sx={{
             mr: "auto",
-            color: "black",
+            color: "text",
             fontSize: 4,
-            fontWeight: "bold",
             fontFamily: "mono",
+            fontWeight: "bold",
             textDecoration: "none",
           }}
           to="/"
         >
-          Minimal blog
+          Minimal
         </Link>
-        <Styled.a as={Link} to="/about">
+        <Link
+          activeClassName="active"
+          sx={{ variant: "links.nav" }}
+          to="/about"
+        >
           About
-        </Styled.a>
+        </Link>
       </nav>
     </header>
   )

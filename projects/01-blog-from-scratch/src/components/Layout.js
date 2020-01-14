@@ -19,10 +19,16 @@ const Layout = ({ children }) => {
           },
           body: {
             margin: 0,
-            color: theme.colors.black,
-            backgroundColor: theme.colors.gray[2],
+            color: theme.colors.text,
+            backgroundColor: theme.colors.background,
             fontFamily: theme.fonts.sans,
-            lineHeight: theme.lineHeights.normal,
+            lineHeight: theme.lineHeights.relaxed,
+            webkitFontSmoothing: "antialiased",
+            textRendering: "optimizeLegibility",
+          },
+
+          "h1, h2, h3, h4, h5, h6": {
+            margin: 0,
           },
         })}
       />
@@ -35,13 +41,14 @@ const Layout = ({ children }) => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          maxWidth: "6xl",
+          maxWidth: "4xl",
           minHeight: "100vh",
+          px: [4, null, null, 0],
           mx: "auto",
         }}
       >
         <Header />
-        {children}
+        <main sx={{ flex: 1, fontSize: [1, 2] }}>{children}</main>
         <Footer />
       </div>
     </Fragment>

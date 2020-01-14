@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import Layout from "../components/Layout"
-import Content from "../components/Content"
 
 export default () => (
   <Layout>
-    <Content>
-      <Styled.h2>About</Styled.h2>
-    </Content>
+    <h1>About</h1>
+    <p>Gatsby blog with Theme UI</p>
   </Layout>
 )

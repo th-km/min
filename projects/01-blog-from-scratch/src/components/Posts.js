@@ -1,22 +1,32 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
+import { jsx } from "theme-ui"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 
 const Posts = ({ post }) => (
   <article
     sx={{
-      maxWidth: "3xl",
-      borderBottom: theme => `1px solid ${theme.colors.gray[5]}`,
-      pb: 4,
+      py: 5,
+      px: 4,
     }}
   >
-    <Styled.a as={Link} to={post.slug}>
-      {post.title}
-    </Styled.a>
-    <span>{post.date}</span>
-    <Image fluid={post.image.sharp.fluid} alt={post.alt} />
-    <p>{post.excerpt}</p>
+    <header
+      sx={{
+        display: ["block", "flex"],
+        alignItems: "baseline",
+        py: 4,
+      }}
+    >
+      <h2 sx={{ lineHeight: "tight", fontSize: 2 }}>{post.title}</h2>
+      <small sx={{ variant: "dates.small" }}>{post.date}</small>
+    </header>
+    <section>
+      <Image fluid={post.image.sharp.fluid} alt={post.alt} />
+      <p>{post.excerpt}</p>
+      <Link sx={{ variant: "links.more" }} to={post.slug}>
+        Read more
+      </Link>
+    </section>
   </article>
 )
 
