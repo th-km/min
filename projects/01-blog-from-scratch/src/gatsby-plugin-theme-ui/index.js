@@ -2,6 +2,7 @@ import { tailwind } from "@theme-ui/presets"
 
 export default {
   ...tailwind,
+  initialColorModeName: "dark",
   colors: {
     ...tailwind.colors,
     text: "#fafafa",
