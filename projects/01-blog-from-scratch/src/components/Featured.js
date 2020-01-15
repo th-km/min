@@ -26,24 +26,9 @@ const Featured = () => {
   `)
 
   return (
-    <article
-      sx={{
-        py: 5,
-        borderBottomWidth: "px",
-        borderBottomStyle: "solid",
-        borderColor: "gray",
-      }}
-    >
-      <header
-        sx={{
-          display: ["block", "flex"],
-          alignItems: "baseline",
-          py: 4,
-        }}
-      >
-        <h2 sx={{ lineHeight: "tight", fontSize: 2 }}>
-          {post.frontmatter.title}
-        </h2>
+    <article sx={{ variant: "articles.full" }}>
+      <header sx={{ variant: "headers.article" }}>
+        <h2 sx={{ variant: "titles.full" }}>{post.frontmatter.title}</h2>
         <small sx={{ variant: "dates.small" }}>{post.frontmatter.date}</small>
       </header>
       <section>

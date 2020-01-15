@@ -20,36 +20,72 @@ export default {
     ...tailwind.styles,
     blockquote: {
       paddingLeft: 4,
-      borderLeftWidth: 4,
+      borderLeftWidth: 2,
       borderColor: "gray",
       borderLeftStyle: "solid",
-    },
-    strong: {
-      padding: 1,
-      backgroundColor: "gray.2",
     },
   },
   links: {
     nav: {
-      color: "text",
+      position: "relative",
+      display: "inline-block",
+      color: "gray",
       textDecoration: "none",
+
+      "::after": {
+        content: "''",
+        position: "absolute",
+        width: "full",
+        height: "1px",
+        bottom: "0",
+        left: "0",
+        backgroundColor: "gray",
+        transform: "scaleX(0)",
+        transformOrigin: "bottom right",
+        transition: "transform 0.4s cubic-bezier(0.86, 0, 0.07, 1)",
+      },
+
+      ":hover::after": {
+        transform: "scaleX(1)",
+        transformOrigin: "bottom left",
+      },
+
       "&.active": {
-        pb: 1,
-        borderBottomWidth: "px",
-        borderBottomStyle: "solid",
-        borderColor: "text",
+        color: "text",
+      },
+
+      "&.active::after": {
+        backgroundColor: "text",
       },
     },
     more: {
-      pb: 2,
-      borderBottomWidth: "px",
-      borderBottomStyle: "solid",
-      borderColor: "gray",
+      position: "relative",
+      display: "inline-block",
+      pb: "2px",
       color: "gray",
       fontSize: 0,
+      fontWeight: "semibold",
+      letterSpacing: "wide",
       textTransform: "uppercase",
       textDecoration: "none",
-      letterSpacing: "wide",
+
+      "::after": {
+        content: "''",
+        position: "absolute",
+        width: "full",
+        height: "1px",
+        bottom: "0",
+        left: "0",
+        backgroundColor: "gray",
+        transform: "scaleX(0)",
+        transformOrigin: "bottom right",
+        transition: "transform 0.4s cubic-bezier(0.86, 0, 0.07, 1)",
+      },
+
+      ":hover::after": {
+        transform: "scaleX(1)",
+        transformOrigin: "bottom left",
+      },
     },
     back: {
       color: "text",
@@ -58,10 +94,39 @@ export default {
   },
   dates: {
     small: {
-      pl: [null, 3],
-      fontFamily: "mono",
-      fontSize: 0,
+      pl: [null, null, 3],
       color: "gray",
+      fontFamily: "mono",
+      fontSize: "0.75rem",
+    },
+  },
+  headers: {
+    menu: {
+      py: 4,
+    },
+    article: {
+      display: ["block", null, "flex"],
+      alignItems: "baseline",
+      pb: 4,
+    },
+  },
+  titles: {
+    full: {
+      fontSize: [2, 3, 4],
+      lineHeight: "tight",
+    },
+    small: {
+      fontSize: 2,
+      lineHeight: "tight",
+    },
+  },
+  articles: {
+    full: {
+      py: [4, 5],
+    },
+    small: {
+      py: [4, 5],
+      px: 4,
     },
   },
 }

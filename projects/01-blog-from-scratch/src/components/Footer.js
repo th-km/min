@@ -5,7 +5,11 @@ const Footer = () => {
   return (
     <footer
       sx={{
+        mt: 4,
         py: 4,
+        borderColor: "gray",
+        borderTopStyle: "solid",
+        borderTopWidth: "px",
       }}
     >
       <p

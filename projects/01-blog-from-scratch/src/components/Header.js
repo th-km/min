@@ -13,11 +13,7 @@ const Header = () => {
   }
 
   return (
-    <header
-      sx={{
-        py: 4,
-      }}
-    >
+    <header sx={{ variant: "headers.menu" }}>
       <nav
         sx={{
           display: "flex",
@@ -26,9 +22,9 @@ const Header = () => {
       >
         <Link
           sx={{
-            mr: "auto",
+            mr: [3, 4],
             color: "text",
-            fontSize: 4,
+            fontSize: [3, 4, 5],
             fontFamily: "mono",
             fontWeight: "bold",
             textDecoration: "none",
@@ -48,14 +44,15 @@ const Header = () => {
           mode={colorMode}
           sx={{
             display: "inline-block",
-            ml: 3,
+            ml: "auto",
             p: 2,
             border: 0,
-            borderRadius: "default",
             fontFamily: "mono",
-            fontSize: 0,
+            fontSize: "0.75rem",
             color: "background",
             backgroundColor: "text",
+            borderRadius: "sm",
+            boxShadow: "sm",
             appearance: "none",
           }}
           onClick={cycleColorMode}
