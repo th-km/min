@@ -87,10 +87,6 @@ export default {
         transformOrigin: "bottom left",
       },
     },
-    back: {
-      color: "text",
-      textDecoration: "none",
-    },
   },
   dates: {
     small: {

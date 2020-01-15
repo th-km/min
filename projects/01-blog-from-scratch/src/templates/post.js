@@ -12,9 +12,6 @@ const Post = ({ data: { mdx: post } }) => (
         <small sx={{ variant: "dates.small" }}>{post.frontmatter.date}</small>
       </header>
       <MDXRenderer>{post.body}</MDXRenderer>
-      <Link sx={{ variant: "links.back" }} to="/">
-        &larr; Back
-      </Link>
     </article>
   </Layout>
 )
