@@ -7,6 +7,13 @@ export default {
     text: "#fafafa",
     background: "#1e1e1e",
     gray: "#888",
+    modes: {
+      light: {
+        text: "#1e1e1e",
+        background: "#fafafa",
+        gray: "#666",
+      },
+    },
   },
   styles: {
     ...tailwind.styles,
