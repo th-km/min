@@ -48,7 +48,16 @@ const Layout = ({ children }) => {
         }}
       >
         <Header />
-        <main sx={{ flex: 1 }}>{children}</main>
+        <main
+          sx={{
+            flex: 1,
+            display: "grid",
+            gridTemplateColumns: ["1fr", "repeat(2, 1fr)"],
+            gridGap: 4,
+          }}
+        >
+          {children}
+        </main>
         <Footer />
       </div>
     </Fragment>

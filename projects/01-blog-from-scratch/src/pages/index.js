@@ -11,11 +11,9 @@ export default () => {
   return (
     <Layout>
       <Featured />
-      <div sx={{ display: ["block", "null", "flex"], mx: -4 }}>
-        {posts.map(post => (
-          <Posts key={post.id} post={post} />
-        ))}
-      </div>
+      {posts.map(post => (
+        <Posts key={post.id} post={post} />
+      ))}
     </Layout>
   )
 }

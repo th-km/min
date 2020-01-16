@@ -61,6 +61,7 @@ export default {
     more: {
       position: "relative",
       display: "inline-block",
+      mb: 4,
       pb: "2px",
       color: "gray",
       fontSize: 0,
@@ -94,6 +95,10 @@ export default {
       color: "gray",
       fontFamily: "mono",
       fontSize: "0.75rem",
+
+      "::after": {
+        content: "hi",
+      },
     },
   },
   headers: {
@@ -103,7 +108,7 @@ export default {
     article: {
       display: ["block", null, "flex"],
       alignItems: "baseline",
-      pb: 4,
+      py: 4,
     },
   },
   titles: {
@@ -118,12 +123,10 @@ export default {
   },
   articles: {
     full: {
-      py: [4, 5],
+      gridColumn: "1/-1",
     },
     small: {
-      width: ["full", null, "1/2"],
-      py: [4, 5],
-      px: 4,
+      gridColumn: "auto",
     },
   },
 }
