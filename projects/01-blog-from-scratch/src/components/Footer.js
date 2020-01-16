@@ -7,7 +7,7 @@ const Footer = () => {
       sx={{
         mt: 4,
         py: 4,
-        borderColor: "gray",
+        borderColor: "muted",
         borderTopStyle: "solid",
         borderTopWidth: "px",
       }}
@@ -16,7 +16,7 @@ const Footer = () => {
         sx={{
           fontSize: 0,
           fontFamily: "mono",
-          color: "gray",
+          color: "muted",
         }}
       >
         © {new Date().getFullYear()} Minimal Gatsby blog

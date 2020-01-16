@@ -6,12 +6,12 @@ export default {
   colors: {
     text: "#fafafa",
     background: "#1e1e1e",
-    gray: "#888",
+    muted: "#888",
     modes: {
       light: {
         text: "#1e1e1e",
         background: "#fafafa",
-        gray: "#666",
+        muted: "#666",
       },
     },
   },
@@ -21,7 +21,7 @@ export default {
       marginLeft: [0, 2, 4],
       paddingLeft: 4,
       borderLeftWidth: 2,
-      borderColor: "gray",
+      borderColor: "muted",
       borderLeftStyle: "solid",
     },
     p: {
@@ -35,7 +35,7 @@ export default {
     nav: {
       position: "relative",
       display: "inline-block",
-      color: "gray",
+      color: "muted",
       textDecoration: "none",
 
       "::after": {
@@ -45,7 +45,7 @@ export default {
         height: "1px",
         bottom: "0",
         left: "0",
-        backgroundColor: "gray",
+        backgroundColor: "muted",
         transform: "scaleX(0)",
         transformOrigin: "bottom right",
         transition: "transform 0.4s cubic-bezier(0.86, 0, 0.07, 1)",
@@ -67,9 +67,9 @@ export default {
     more: {
       position: "relative",
       display: "inline-block",
-      mb: 4,
+      mb: [3, 4],
       pb: "2px",
-      color: "gray",
+      color: "muted",
       fontSize: 0,
       fontWeight: "semibold",
       letterSpacing: "wide",
@@ -83,7 +83,7 @@ export default {
         height: "1px",
         bottom: "0",
         left: "0",
-        backgroundColor: "gray",
+        backgroundColor: "muted",
         transform: "scaleX(0)",
         transformOrigin: "bottom right",
         transition: "transform 0.4s cubic-bezier(0.86, 0, 0.07, 1)",
@@ -93,6 +93,11 @@ export default {
         transform: "scaleX(1)",
         transformOrigin: "bottom left",
       },
+    },
+    article: {
+      color: "muted",
+      fontFamily: "mono",
+      fontSize: 0,
     },
   },
   articles: {
@@ -110,7 +115,7 @@ export default {
     article: {
       display: ["block", null, "flex"],
       alignItems: "baseline",
-      py: 4,
+      py: [3, 4],
     },
   },
   titles: {
@@ -126,7 +131,7 @@ export default {
   dates: {
     small: {
       pl: [null, null, 3],
-      color: "gray",
+      color: "muted",
       fontFamily: "mono",
       fontSize: "0.75rem",
     },
