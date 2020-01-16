@@ -88,16 +88,12 @@ export default {
       },
     },
   },
-  dates: {
+  articles: {
+    full: {
+      gridColumn: "1/-1",
+    },
     small: {
-      pl: [null, null, 3],
-      color: "gray",
-      fontFamily: "mono",
-      fontSize: "0.75rem",
-
-      "::after": {
-        content: "hi",
-      },
+      gridColumn: "auto",
     },
   },
   headers: {
@@ -120,12 +116,12 @@ export default {
       lineHeight: "none",
     },
   },
-  articles: {
-    full: {
-      gridColumn: "1/-1",
-    },
+  dates: {
     small: {
-      gridColumn: "auto",
+      pl: [null, null, 3],
+      color: "gray",
+      fontFamily: "mono",
+      fontSize: "0.75rem",
     },
   },
 }
