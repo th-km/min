@@ -4,7 +4,6 @@ export default {
   ...tailwind,
   initialColorModeName: "dark",
   colors: {
-    ...tailwind.colors,
     text: "#fafafa",
     background: "#1e1e1e",
     gray: "#888",
