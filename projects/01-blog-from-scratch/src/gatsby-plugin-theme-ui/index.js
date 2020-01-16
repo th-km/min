@@ -18,10 +18,17 @@ export default {
   styles: {
     ...tailwind.styles,
     blockquote: {
+      marginLeft: [0, 2, 4],
       paddingLeft: 4,
       borderLeftWidth: 2,
       borderColor: "gray",
       borderLeftStyle: "solid",
+    },
+    p: {
+      fontSize: [1, 2],
+    },
+    li: {
+      fontSize: [1, 2],
     },
   },
   links: {
