@@ -43,12 +43,12 @@ const Layout = ({ children }) => {
           flexDirection: "column",
           maxWidth: "4xl",
           minHeight: "100vh",
-          px: [4, null, null, 0],
+          px: [3, 4, null, 0],
           mx: "auto",
         }}
       >
         <Header />
-        <main sx={{ flex: 1, fontSize: [1, 2] }}>{children}</main>
+        <main sx={{ flex: 1 }}>{children}</main>
         <Footer />
       </div>
     </Fragment>

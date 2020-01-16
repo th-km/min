@@ -109,11 +109,11 @@ export default {
   titles: {
     full: {
       fontSize: [2, 3, 4],
-      lineHeight: "tight",
+      lineHeight: "none",
     },
     small: {
       fontSize: 2,
-      lineHeight: "tight",
+      lineHeight: "none",
     },
   },
   articles: {
@@ -121,6 +121,7 @@ export default {
       py: [4, 5],
     },
     small: {
+      width: ["full", null, "1/2"],
       py: [4, 5],
       px: 4,
     },
