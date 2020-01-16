@@ -4,7 +4,7 @@
 
 ## Overview
 
-1. Blog from Scratch
+1. Blog from Scratch [demo here](https://100-days-of-gatsby-blog.netlify.com/)
 
 ### Technology
 
