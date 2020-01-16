@@ -8,10 +8,12 @@ const Post = ({ data: { mdx: post } }) => (
   <Layout>
     <article sx={{ variant: "articles.full" }}>
       <header sx={{ variant: "headers.article" }}>
-        <h2 sx={{ variant: "titles.full" }}>{post.frontmatter.title}</h2>
+        <h1 sx={{ variant: "titles.full" }}>{post.frontmatter.title}</h1>
         <small sx={{ variant: "dates.small" }}>{post.frontmatter.date}</small>
       </header>
-      <MDXRenderer>{post.body}</MDXRenderer>
+      <section>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </section>
     </article>
   </Layout>
 )

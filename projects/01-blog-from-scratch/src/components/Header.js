@@ -20,19 +20,16 @@ const Header = () => {
           alignItems: "baseline",
         }}
       >
-        <Link
+        <h1
           sx={{
             mr: [3, 4],
-            color: "text",
             fontSize: [3, 4, 5],
             fontFamily: "mono",
             fontWeight: "bold",
-            textDecoration: "none",
           }}
-          to="/"
         >
-          Minimal
-        </Link>
+          <Link to="/">Minimal</Link>
+        </h1>
         <Link
           activeClassName="active"
           sx={{ variant: "links.nav" }}

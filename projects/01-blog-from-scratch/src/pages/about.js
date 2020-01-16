@@ -5,8 +5,10 @@ import Layout from "../components/Layout"
 export default () => (
   <Layout>
     <div sx={{ py: [4, 5] }}>
-      <h2 sx={{ variant: "titles.featured" }}>About</h2>
-      <p>Gatsby blog with Theme UI</p>
+      <p>
+        This project is part of the #100DaysOfGatsby challenge, more information
+        can be found here
+      </p>
     </div>
   </Layout>
 )

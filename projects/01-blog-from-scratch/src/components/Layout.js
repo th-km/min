@@ -30,6 +30,10 @@ const Layout = ({ children }) => {
           "h1, h2, h3, h4, h5, h6": {
             margin: 0,
           },
+          a: {
+            color: theme.colors.text,
+            textDecoration: "none",
+          },
         })}
       />
       <Helmet>
