@@ -37,7 +37,9 @@ const Post = ({ pageContext: { next, prev }, data: { mdx: post } }) => {
                   to={prev.frontmatter.slug}
                   rel="prev"
                 >
-                  <span sx={{ fontSize: 2, fontWeight: "bold" }}>Prev </span>
+                  <span sx={{ color: "text", fontSize: 2, fontWeight: "bold" }}>
+                    Prev{" "}
+                  </span>
                   {prev.frontmatter.title}
                 </Link>
               )}
@@ -49,7 +51,9 @@ const Post = ({ pageContext: { next, prev }, data: { mdx: post } }) => {
                   to={next.frontmatter.slug}
                   rel="next"
                 >
-                  <span sx={{ fontSize: 2, fontWeight: "bold" }}>Next </span>
+                  <span sx={{ color: "text", fontSize: 2, fontWeight: "bold" }}>
+                    Next{" "}
+                  </span>
                   {next.frontmatter.title}
                 </Link>
               )}
