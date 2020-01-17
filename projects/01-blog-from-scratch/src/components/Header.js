@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, useColorMode } from "theme-ui"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
@@ -28,15 +28,20 @@ const Header = () => {
             fontWeight: "bold",
           }}
         >
-          <Link to="/">Minimal</Link>
+          <AniLink cover bg="currentColor" direction="left" to="/">
+            Minimal
+          </AniLink>
         </h1>
-        <Link
+        <AniLink
+          cover
+          bg="currentColor"
+          direction="left"
           activeClassName="active"
           sx={{ variant: "links.nav" }}
           to="/about"
         >
           About
-        </Link>
+        </AniLink>
         <button
           mode={colorMode}
           title="Cycle color mode"

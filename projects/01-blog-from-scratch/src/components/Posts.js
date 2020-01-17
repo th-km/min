@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from "gatsby-image"
 
 const Posts = ({ post }) => (
@@ -12,9 +12,15 @@ const Posts = ({ post }) => (
     <section>
       <Image fluid={post.image.sharp.fluid} alt={post.alt} />
       <p>{post.excerpt}</p>
-      <Link sx={{ variant: "links.more" }} to={post.slug}>
+      <AniLink
+        cover
+        bg="currentColor"
+        direction="left"
+        sx={{ variant: "links.more" }}
+        to={post.slug}
+      >
         Read more
-      </Link>
+      </AniLink>
     </section>
   </article>
 )

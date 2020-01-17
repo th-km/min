@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/Layout"
 
@@ -32,7 +33,10 @@ const Post = ({ pageContext: { next, prev }, data: { mdx: post } }) => {
           >
             <li>
               {prev && (
-                <Link
+                <AniLink
+                  cover
+                  bg="currentColor"
+                  direction="left"
                   sx={{ variant: "links.article" }}
                   to={prev.frontmatter.slug}
                   rel="prev"
@@ -41,12 +45,15 @@ const Post = ({ pageContext: { next, prev }, data: { mdx: post } }) => {
                     Prev{" "}
                   </span>
                   {prev.frontmatter.title}
-                </Link>
+                </AniLink>
               )}
             </li>
             <li>
               {next && (
-                <Link
+                <AniLink
+                  cover
+                  bg="currentColor"
+                  direction="left"
                   sx={{ variant: "links.article" }}
                   to={next.frontmatter.slug}
                   rel="next"
@@ -55,7 +62,7 @@ const Post = ({ pageContext: { next, prev }, data: { mdx: post } }) => {
                     Next{" "}
                   </span>
                   {next.frontmatter.title}
-                </Link>
+                </AniLink>
               )}
             </li>
           </ul>

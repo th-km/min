@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Image from "gatsby-image"
 
 const Featured = () => {
@@ -37,9 +38,15 @@ const Featured = () => {
           alt={post.frontmatter.alt}
         />
         <p sx={{ fontSize: [1, 2, 3] }}>{post.excerpt}</p>
-        <Link sx={{ variant: "links.more" }} to={post.frontmatter.slug}>
+        <AniLink
+          cover
+          bg="currentColor"
+          direction="left"
+          sx={{ variant: "links.more" }}
+          to={post.frontmatter.slug}
+        >
           Read more
-        </Link>
+        </AniLink>
       </section>
     </article>
   )
