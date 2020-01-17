@@ -39,6 +39,7 @@ const Header = () => {
         </Link>
         <button
           mode={colorMode}
+          title="Cycle color mode"
           sx={{
             ml: "auto",
             p: 0,
