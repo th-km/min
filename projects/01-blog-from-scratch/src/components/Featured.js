@@ -20,7 +20,7 @@ const Featured = () => {
             }
           }
         }
-        excerpt
+        excerpt(pruneLength: 200)
       }
     }
   `)
@@ -36,7 +36,7 @@ const Featured = () => {
           fluid={post.frontmatter.image.sharp.fluid}
           alt={post.frontmatter.alt}
         />
-        <p>{post.excerpt}</p>
+        <p sx={{ fontSize: [1, 2, 3] }}>{post.excerpt}</p>
         <Link sx={{ variant: "links.more" }} to={post.frontmatter.slug}>
           Read more
         </Link>
