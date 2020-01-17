@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Header = () => {
   const [colorMode, setColorMode] = useColorMode()
-  const colorModes = ["dark", "light"]
+  const colorModes = ["dark", "light", "calm", "contrast"]
 
   const cycleColorMode = () => {
     const i = colorModes.indexOf(colorMode)
@@ -40,21 +40,34 @@ const Header = () => {
         <button
           mode={colorMode}
           sx={{
-            display: "inline-block",
             ml: "auto",
-            p: 2,
+            p: 0,
             border: 0,
-            fontFamily: "mono",
-            fontSize: "0.75rem",
-            color: "background",
-            backgroundColor: "text",
-            borderRadius: "sm",
-            boxShadow: "sm",
+            color: "text",
+            backgroundColor: "transparent",
             appearance: "none",
+            cursor: "pointer",
+            transition: "transform .25s ease",
+
+            "&:hover": {
+              transform: "scale(1.1)",
+            },
           }}
           onClick={cycleColorMode}
         >
-          {colorMode.replace(/^\w/, c => c.toUpperCase())}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+          </svg>
         </button>
       </nav>
     </header>

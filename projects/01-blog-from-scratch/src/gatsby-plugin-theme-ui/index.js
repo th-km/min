@@ -11,7 +11,14 @@ export default {
       light: {
         text: "#1e1e1e",
         background: "#fafafa",
-        muted: "#666",
+      },
+      calm: {
+        text: "#001F33",
+        background: "#F8DECD",
+      },
+      contrast: {
+        text: "#c6f14e",
+        background: "#360bb4",
       },
     },
   },
