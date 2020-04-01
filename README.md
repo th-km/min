@@ -1,14 +1,11 @@
-# 100 Days Of Gatsby
+# Minimal
 
-<img src="preview/gatsby-cover.png" alt="Gatsby cover">
+<img src="preview/preview.png" alt="Image cover">
 
 ## Overview
 
-1. Blog from Scratch [demo here](https://100-days-of-gatsby-blog.netlify.com/)
-
-### Technology
-
-- [x] React
-- [x] Node
 - [x] Gatsby
-- [x] GraphQL
+- [x] Theme UI
+- [x] MDX
+- [x] Page transition
+- [x] Offline support
