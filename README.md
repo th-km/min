@@ -1,6 +1,6 @@
 # Minimal
 
-<img src="preview/preview.png" alt="Image cover">
+<img src="preview/preview-cover.png" alt="Preview cover">
 
 ## Overview
 
